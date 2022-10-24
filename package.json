@@ -1,0 +1,57 @@
+{
+  "name": "showloop",
+  "description": "Simple JavaScript library for loop-sliding showcase",
+  "version": "0.1.0",
+  "browser": "dist/showloop.js",
+  "module": "dist/showloop.esm.js",
+  "types": "dist/types/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/qrac/showloop",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/qrac/showloop"
+  },
+  "bugs": {
+    "url": "https://github.com/qrac/showloop/issues"
+  },
+  "keywords": [
+    "marquee",
+    "loop",
+    "slide",
+    "slide-show",
+    "gallery",
+    "browser",
+    "javascript",
+    "typescript",
+    "japanese",
+    "showloop"
+  ],
+  "author": {
+    "name": "Qrac",
+    "url": "https://qrac.jp"
+  },
+  "organization": {
+    "name": "QRANOKO",
+    "url": "https://qranoko.jp"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "npm run clean && npm run build:src & npm run build:type",
+    "build:src": "vite build",
+    "build:type": "tsc",
+    "clean": "rimraf ./dist",
+    "play": "vite ./playground/umd -c=./vite.config.ts",
+    "play:esm": "vite ./playground/esm -c=./vite.config.ts",
+    "prepublishOnly": "npm run clean && npm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.4",
+    "esbuild": "^0.15.12",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.8.4",
+    "vite": "^3.1.8"
+  }
+}

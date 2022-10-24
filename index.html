@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>showloop</title>
+  </head>
+  <body>
+    <div data-showloop style="max-width: 200px; border: 1px solid black">
+      <div data-showloop-slide>
+        <div data-showloop-items>
+          <span style="font-size: 20px">👜</span>
+        </div>
+      </div>
+    </div>
+
+    <div
+      data-showloop
+      style="max-width: 100px; border: 1px solid black; margin-top: 8px"
+    >
+      <div data-showloop-slide>
+        <div data-showloop-items>
+          <span style="white-space: nowrap">Slide the showcase in a loop.</span>
+        </div>
+      </div>
+    </div>
+
+    <div data-showloop='{ "direction": "reverse", "speed": 10000 }'>
+      <div data-showloop-slide>
+        <div style="display: flex; font-size: 80px" data-showloop-items>
+          <span>👕</span>
+          <span>👚</span>
+          <span>🥼</span>
+          <span>🧥</span>
+        </div>
+      </div>
+    </div>
+
+    <div style="display: flex; gap: 8px">
+      <div
+        data-showloop='{ "axis": "Y", "speed": 1000 }'
+        style="width: fit-content; height: 200px; border: 1px solid black"
+      >
+        <div data-showloop-slide>
+          <div data-showloop-items>
+            <span style="font-size: 20px">🎁</span>
+          </div>
+        </div>
+      </div>
+
+      <div
+        data-showloop='{ "axis": "Y", "direction": "reverse", "speed": 1000 }'
+        style="width: fit-content; height: 200px; border: 1px solid black"
+      >
+        <div data-showloop-slide>
+          <div data-showloop-items>
+            <span style="color: red; font-size: 20px">NOW ON SALE</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="module">
+      import showloop from "./src/index.ts"
+      showloop()
+    </script>
+  </body>
+</html>
