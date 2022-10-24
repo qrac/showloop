@@ -101,8 +101,9 @@ function mount(el: ShowloopElement, options: ResolvedOptions) {
 
     clearTimeout(timer)
 
-    timer = setTimeout(function () {
+    timer = window.setTimeout(function () {
       if (contentSize !== stageSize) {
+        console.log("resize")
         setup(contentSize)
       }
     }, term)
