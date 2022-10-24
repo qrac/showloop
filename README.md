@@ -49,7 +49,7 @@ HTML に `data-showloop`・`data-showloop-slide`・`data-showloop-items` を付�
 
 <!-- prettier-ignore -->
 ```html
-<script src="https://cdn.jsdelivr.net/npm/showloop@0.1.0/dist/showloop.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/showloop@0.1.1/dist/showloop.js"></script>
 <script>showloop()</script>
 ```
 
@@ -58,7 +58,7 @@ HTML に `data-showloop`・`data-showloop-slide`・`data-showloop-items` を付�
 <!-- prettier-ignore -->
 ```html
 <script type="module">
-  import showloop from "https://cdn.jsdelivr.net/npm/showloop@0.1.0/dist/showloop.esm.js"
+  import showloop from "https://cdn.jsdelivr.net/npm/showloop@0.1.1/dist/showloop.esm.js"
   showloop()
 </script>
 ```

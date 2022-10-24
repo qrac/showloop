@@ -1,7 +1,7 @@
 {
   "name": "showloop",
   "description": "Simple JavaScript library for loop-sliding showcase",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "browser": "dist/showloop.js",
   "module": "dist/showloop.esm.js",
   "types": "dist/types/index.d.ts",
