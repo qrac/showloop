@@ -50,6 +50,7 @@ function mount(el: ShowloopElement, options: ResolvedOptions) {
   let itemsSize = 0
   let wantItems = 0
   let cloneItems = 0
+  let shortItems = 0
   let needItems = 0
 
   function setup(contentSize: number) {
@@ -60,8 +61,9 @@ function mount(el: ShowloopElement, options: ResolvedOptions) {
     wantItems = Math.ceil((stageSize * 2) / itemsSize)
     cloneItems =
       [...el.slide.querySelectorAll(`[${config.itemsAttr}]`)].length - 1
-    needItems = slideSize >= limitSize ? 0 : wantItems - cloneItems
-    needItems = useLimit ? needItems : wantItems - cloneItems
+    shortItems = wantItems - cloneItems
+    needItems = slideSize >= limitSize ? (cloneItems === 0 ? 1 : 0) : shortItems
+    needItems = useLimit ? needItems : shortItems
 
     for (let step = 0; step < needItems; step++) {
       const clone = el.items.cloneNode(true)

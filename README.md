@@ -49,7 +49,7 @@ HTML に `data-showloop`・`data-showloop-slide`・`data-showloop-items` を付�
 
 <!-- prettier-ignore -->
 ```html
-<script src="https://cdn.jsdelivr.net/npm/showloop@0.1.1/dist/showloop.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/showloop@0.1.2/dist/showloop.js"></script>
 <script>showloop()</script>
 ```
 
@@ -58,7 +58,7 @@ HTML に `data-showloop`・`data-showloop-slide`・`data-showloop-items` を付�
 <!-- prettier-ignore -->
 ```html
 <script type="module">
-  import showloop from "https://cdn.jsdelivr.net/npm/showloop@0.1.1/dist/showloop.esm.js"
+  import showloop from "https://cdn.jsdelivr.net/npm/showloop@0.1.2/dist/showloop.esm.js"
   showloop()
 </script>
 ```
@@ -117,7 +117,7 @@ showloop()
 
 ### useLimit (⚠️danger)
 
-デフォルト `true` ではループ要素を複製する限界が設定されており、画面幅の 2 倍以上は増えません。使用上、このリミッターを外したい場合のみ `false` にします。
+デフォルト `true` ではループ要素を複製する限界が設定されており、複製が存在する状態だと画面幅の 2 倍以上は増えません。使用上、このリミッターを外したい場合のみ `false` にします。
 
 ※注意するべきは縦ループです。ウェブは基本的に縦幅の制約が無いため、リミッターを外した状態で `height` または `max-height` に値がない要素内をループさせると、縦幅の計算と複製が無限ループしてブラウザがクラッシュします。
 
